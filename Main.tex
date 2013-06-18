@@ -1,0 +1,236 @@
+\documentclass[%
+%%%%%		PDFTex verwenden
+pagesize=pdftex,
+%%%%%   Language 
+german,
+%%%%%   Paper size
+a4paper,
+%%%%%		Schriftgröße Standard 11
+fontsize=11pt,
+%%%%%   Get smaller borders and more space for writing
+%%%%% ATTENTION be carefull with your binding! See scrbook manual! 
+DIV=14,
+%%%%%   Set the binding correction
+BCOR=10mm,
+%%%%%   Create smaler headlines
+2.5headlines, 
+%%%%%   Create small headings
+headings=small, 
+%%%%%   Use a titlepage
+titlepage, 
+%openbib,
+%%%%%   Bibliography in Table of Contents with a chapter number
+%bibliography=totocnumbered,
+%%%%%   Bibliography in Table of Contents without a chapter number
+bibliography=totoc,
+%%%%%   Add the prefix "Appendix" to the apendix chapters
+appendixprefix = true,
+%%%%%   Use a twoside style
+%%%%% ATTENTION oneside will change layout completely! Check this early!
+twoside,
+%open=any,
+%oneside,
+parskip=half,
+]{scrbook}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INCLUDE PACKAGES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fontspec}
+\setmainfont[
+            Path              = src/fonts/,
+            Extension         = .ttf,
+            BoldFont          = OpenSans-Semibold,
+            ItalicFont        = OpenSans-Italic,
+            BoldItalicFont    = OpenSans-SemiboldItalic,
+            SmallCapsFeatures = {Letters = SmallCaps},
+            Numbers           = OldStyle,
+            Ligatures=TeX]{OpenSans-Regular}
+\newfontfamily\opensansfont[
+            Path              = src/fonts/,
+            Extension         = .ttf,
+            BoldFont          = OpenSans-Semibold,
+            ItalicFont        = OpenSans-Italic,
+            BoldItalicFont    = OpenSans-SemiboldItalic,
+            SmallCapsFeatures = {Letters = SmallCaps},
+            Numbers           = OldStyle,
+            Ligatures=TeX]{OpenSans-Regular}
+\newfontfamily\sourcecodefont[
+            Path              = src/fonts/,
+            Extension         = .otf,
+            BoldFont          = SourceCodePro-Semibold,
+            SmallCapsFeatures = {Letters = SmallCaps},
+            Numbers           = OldStyle,
+            Ligatures=TeX]{SourceCodePro-Regular}
+\usepackage[ngerman, german]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage[autooneside,automark]{scrpage2}
+\usepackage{bookmark}
+\usepackage{longtable,ltcaption}
+\usepackage{wrapfig}
+\usepackage{textcomp}
+\usepackage{listings}
+\usepackage{subfigure}
+\usepackage{fancybox}
+\usepackage{caption}
+\usepackage{colortbl}
+\usepackage{amssymb}
+\usepackage{url}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DOCUMENT DEFINITIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\docAuthor}{Norman Rzepka}
+\newcommand{\docAuthorMail}{norman.rzepka@student.hpi.uni-potsdam.de}
+\newcommand{\docTitle}{The design of an web-based event-driven client application architecture for ‘Project Zoom’}
+\newcommand{\docTitleDE}{Entwicklung einer web-basierten ereignis-gesteuerten Clientantwendung-Architektur für "Project Zoom"}
+\newcommand{\docSupervisited}{Prof. Dr. Holger Giese, Gregor Berg M.Sc. und Thomas Behyl, M.Sc.}
+\newcommand{\docCity}{Potsdam}
+\newcommand{\docDate}{\today}
+\newcommand{\docChair}{System Analysis and Modeling Group}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% END OF DOKUMENT DEFINITIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% FONT
+\addtokomafont{chapter}{\opensansfont}
+\addtokomafont{section}{\opensansfont}
+\addtokomafont{subsection}{\opensansfont}
+\addtokomafont{title}{\opensansfont}
+\addtokomafont{subject}{\opensansfont}
+\addtokomafont{chapterentry}{\opensansfont}
+\makeatletter
+\def\url@leostyle{%
+  \def\UrlFont{\sourcecodefont}}
+\makeatother
+\urlstyle{leo}
+
+\captionsetup{format=plain,labelfont=bf,labelsep=endash,justification=RaggedRight}%,indention=1cm}
+\input{util/commands}
+\input{util/hpicolors}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PAGESTYLE SELECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{scrheadings}
+\renewcommand*{\chapterpagestyle}{scrheadings}
+\renewcommand*{\indexpagestyle}{scrheadings}
+\automark[chapter]{chapter}
+\clearscrheadfoot
+\lehead[]{\headmark}%\parbox[b][1.3cm]{.75\textwidth}{\headmark\vskip.15cm}}
+\rohead[]{\headmark}%\parbox[b][1.3cm]{.75\textwidth}{\begin{flushright}\vskip.15cm\headmark\end{flushright}}}
+\cfoot{\parbox[t][1em]{\textwidth}{\centering\vfill\textbf{--} \pagemark\textbf{ --}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% END OF PAGESTYLE SELECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hypersetup{urlcolor=darkgray, linkcolor=darkgray, citecolor=darkgray, colorlinks=true}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% colored head- and footlines
+\setheadsepline{1.0pt}[\color{hpired}] \setfootsepline{1.0pt}[\color{hpired}]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Glossary
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\makeglossaries
+%\glossarystyle{index}
+%\loadglsentries{glossary}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DOKUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	\selectlanguage{ngerman}
+
+	%%% PATHES FOR GRAPHIC-FILES
+	\graphicspath{{./}{img/}}
+	
+	%%% PDF-DOCUMENT-INFO
+	\hypersetup{%
+		pdftitle	= {\docTitle},
+		pdfsubject	= {Master's Thesis},
+		pdfauthor	= {\docAuthor},
+		pdfcreator	= {PDFLaTeX},
+		pdfproducer	= {LaTeX with hyperref and thumbpdf}		
+	}
+	
+	\pagenumbering{Roman}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%% TITLEPAGE, THANKS, ABSTRACT
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{src/titlepage}
+	\thispagestyle{empty}
+	\cleardoublepage
+	\include{src/Acknowledgements}
+	\include{src/Zusammenfassung_d}
+	\include{src/Zusammenfassung_e}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%% TABLE OF CONTENT
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\clearpage
+	\pdfbookmark[0]{Inhaltsverzeichnis}{toc}	
+	\tableofcontents
+ 	
+ 	\clearpage
+	\pagenumbering{arabic}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%% START CONTENT
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%keine Einrückung des Absatzes
+	%\parindent0mm
+	%neue Zeile nach Absatz
+	%\addtolength{\parskip}{\baselineskip}
+
+	\input{src/Motivation}
+    
+    \input{src/Client-Application-Architecture}
+    
+    \input{src/Evaluation-Implementation}
+    
+    \input{src/Conclusion}
+	
+	%\include{src/Grundlagen}
+	
+	%\include{src/Hauptteil}
+	
+	%\include{src/Evaluierung}
+	
+	%\include{src/Schluss}
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%% END CONTENT
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%% BIBLIOGRAPHY
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\clearpage
+	\bibliographystyle{alphadin}
+	\bibliography{src/_Literatur}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%% GLOSSARY
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  \printglossary
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%% APPENDIX
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{appendix} 
+		\clearpage
+		\small
+    \renewcommand{\thepage}{\thechapter-\arabic{page}}
+    %\include{src/Anhang}
+    \include{src/Anhang/App}
+    \include{src/Anhang/Eval}
+	\end{appendix}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%% STATURATION DECLARATION
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\include{util/erklaerung}
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% END DOKUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
