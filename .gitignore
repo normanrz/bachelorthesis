@@ -1,3 +1,9 @@
 Output
 .DS_Store
 node_modules
+*.aux
+*.log
+*.pdf
+*.bbl
+*.toc
+*.blg

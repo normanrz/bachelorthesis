@@ -8,15 +8,23 @@ module.exports = (grunt) ->
         tasks: ["exec:latex"]
         options:
           interrupt: true
+      bibtex:
+        files: "**/*.bib"
+        tasks: ["exec:bibtex"]
+        options:
+          interrupt: true
 
     exec:
       latex:
-        command: "xelatex -output-directory=Output Main.tex"
+        command: "xelatex Main.tex"
+      bibtex:
+        command: "bibtex Main"
 
   )
   
   grunt.loadNpmTasks('grunt-contrib-watch')
   grunt.loadNpmTasks('grunt-exec')
 
-  grunt.registerTask('default', ['exec:latex', 'watch'])
+  grunt.registerTask('build', ['exec:latex', 'exec:bibtex', 'exec:latex'])
+  grunt.registerTask('default', ['build', 'watch'])
 

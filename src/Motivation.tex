@@ -1,8 +1,6 @@
 \chapter{Motivation}
 
-\section{The Bachelor project}
-This Bachelor thesis documents a part of the Bachelor project G1 2012 at the Hasso Plattner Institute in Potsdam. A group of six students developed a documentation tool for the Hasso Plattner Institute School of Design Thinking (D-School) \footnote{\url{http://www.hpi.uni-potsdam.de/d_school/home.html?L=1}}. The project was from September 2012 to July 2013. 
-
+This Bachelor thesis documents a part of the Bachelor project G1 2012 at the Hasso Plattner Institute in Potsdam. A group of six students developed a documentation tool for the Hasso Plattner Institute School of Design Thinking (D-School) \footnote{\url{http://www.hpi.uni-potsdam.de/d_school/home.html?L=1}}. 
 
 \section{Design Thinking at Hasso Plattner Institute}
 The School of Design Thinking offers academic courses for students. Design Thinking is a method for creating new ideas and  developing novel solutions \cite{Plattner_2009}. 
@@ -11,46 +9,73 @@ During the courses the students work on team projects. Starting in the Basic Tra
 
 As one of its core principles the D-School actively encourages multidisciplinary teams. This mixture of different background leads to multiple viewpoints during the design phases and helps the team to filter out obstacles early in the process. 
 
-The projects usually deal with a problem posed by an industry partner. The Design Thinking method includes an iterative process which consists of serveral well-defined phases. The phases guide the teams from basic understandings to the development of testable prototypes. The process is non-linear because the teams are encouraged to iterate. These cycles help to refine the prototypes based on actual user feedback. Throughout the process, the students are being advised by teachers. 
+The projects usually deal with a problem posed by an industry partner. The Design Thinking method includes an iterative process which consists of serveral well-defined phases. The phases guide the teams from basic understandings to the development of testable prototypes. The process is non-linear because the teams are encouraged to iterate. These cycles help to refine the prototypes based on actual user feedback. Throughout the process, the students are being advised by teachers. \missingfigure{Design Thinking phase bubbles}
 
 The D-School provides several team workspaces. A typical workspace consists of a set of whiteboards and a standing desk which is large enough for the whole team to work on. The D-School considers open spaces to be important for the creative process, so the equipment is usually movable. Therefore, the spaces are hosted in large halls. The D-School also provides tools and materials for rapid prototyping.
 
 There are serveral staff members at the D-School for coordinating and acquiring the student's projects. Key stakeholders for this thesis are the Head of D-School, the Programm Manager, the Knowledge Manager and the Track Managers.
 
-\section{The project's process}
+\section{Design process}
 The Bachelor project also applied an interative process which is very similar to the one teached at the D-School. With this approach the project participants were able to benefit from the Design Thinking method while automatically learning about some of the needs of the D-School students.
 
 During the project there have been several interviews with the relevant stakeholders. The group learned about the student's documentation efforts, especially commonly used methods and tools. Other stakeholders like teachers or D-School staff members have also been interviewed. Based on this information prototypes were developed to enhance the documenting experience of the students. These prototypes were evaluated during user testing sessions.
 
 \section{Project Zoom}
-In the second iteration a new prototype was designed which also addressed the need of the staff members to archive and categorize the projects for easy retrieval. This prototype is called "Project Zoom". The following section will highlight the relevant use cases and requirements for this thesis \footnote{The "Software Requirements Specification"\cite{ReqSpec} covers the use cases and requirements in detail}.
+In the second iteration a new prototype was designed which also addressed the need of the staff members to archive and categorize the projects for easy retrieval. This prototype is called ``Project Zoom". The following sections will highlight the most relevant use cases and requirements for this thesis \footnote{The ``Software Requirements Specification"\cite{ReqSpec} covers the use cases and requirements in detail}.
 
 \subsection{Use Cases}
 Project Zoom addresses two main use cases, which were distilled from the insights gathered in the observation phases.
 
 \begin{enumerate}
 \item Student teams document their projects by organizing the digital documents they created in a visual manner.\\
-Prerequisite: The students have the documents digitally available.\\
-Postcondition: A visual knowlegde graph is being created.
+\textsc{Prerequisite}: The students have the documents digitally available.\\
+\textsc{Postcondition}: A visual knowlegde graph is being created.
 
 \item D-School staff members get an overview of all projects. This overview enables access to the projects' classifications, related people and documentations.\\
-Prerequisite: The projects were entered in a database and the students have documented their projects.\\
-Postcondition: A visual representation of the projects is created.
-
+\textsc{Prerequisite}: The projects were entered in a database and the students have documented their projects.\\
+\textsc{Postcondition}: A visual representation of the projects is displayed.
 \end{enumerate}
 
+Beyond these two major use cases there are other relevant use cases.
 
 \begin{enumerate}
 \setcounter{enumi}{2}
 
-\item Test123
+\item The Head of D-School and Program Manager show an overview of a set of projects to potential industry partners using a mobile tablet device.\\
+\textsc{Prerequisite}: The projects were entered in a database.\\
+\textsc{Postcondition}: A visual representation of the projects is displayed.
 
+\item The students add additional documents from their computers at home.\\
+\textsc{Prerequisite}: The students have the documents digitally available.\\
+\textsc{Postcondition}: The documents are included in the knowledge graph.
+
+\item Students, teachers and D-School staff members can retrieve states of the knowledge graph at different points in time.\\
+\textsc{Prerequisite}: The students have documented their projects using the proposed tool.\\
+\textsc{Postcondition}: A historical version of the knowledge graph is displayed.
+
+\item Students can access their documents through different commonly-used storage services, e.g. \textsc{Box}\footnote{The D-School uses \textsc{Box} as a shared storage service. \url{https://www.box.com/}}.\\
+\textsc{Prerequisite}: The students stored documents using the respective service.\\
+\textsc{Postcondition}: Documents are placed in the knowledge graph.
 \end{enumerate}
-
 
 \subsection{Technical Requirements}
 
+To fulfill these use cases there are some technical requirements for designing an implementation of Project Zoom.
+
+\begin{enumerate}
+\item The system's interface has to support multiple plattforms, including the popular desktop operating systems and modern tablet devices. (use cases 4-5)
+\item The system's interface has to be accessible from outside the D-School. (use case 4) 
+\item The systems has to support concurrent users accessing and modifying contents. \textit{Simplifying assumption}: Only one user is modifying one ressource (e.g. a project's graph) at the same time. (general requirement)
+\item The system connects to different data sources, e.g. \textsc{Box}, and makes the stored data available through its GUI. (use case 1,6)
+\item The system connects to the database the D-School uses to store projects and contacts. (use case 2)
+
+\end{enumerate}
+
+\subsection{Design}
+
+Project Zoom is designed applying the concept of semantic zooming \cite{Perlin_1993}. \todo{Describe semantic zoom} There are three semantic zoom levels: An overview of all projects, a detailed view of a project and its metadata, and a view hosting a project's knowledge graph. This approach allows to build interfaces which are targeted at the specific needs of the different stakeholders while combining them into one cohesive system.
 
 
+\subsection{Overall Architecture}
 
 

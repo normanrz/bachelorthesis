@@ -38,22 +38,22 @@ parskip=half,
 \usepackage{fontspec}
 \setmainfont[
             Path              = src/fonts/,
-            Extension         = .ttf,
-            BoldFont          = OpenSans-Semibold,
-            ItalicFont        = OpenSans-Italic,
-            BoldItalicFont    = OpenSans-SemiboldItalic,
+            Extension         = .otf,
+            BoldFont          = SourceSansPro-Semibold,
+            ItalicFont        = SourceSansPro-Italic,
+            BoldItalicFont    = SourceSansPro-SemiboldItalic,
             SmallCapsFeatures = {Letters = SmallCaps},
             Numbers           = OldStyle,
-            Ligatures=TeX]{OpenSans-Regular}
+            Ligatures=TeX]{SourceSansPro-Regular}
 \newfontfamily\opensansfont[
             Path              = src/fonts/,
-            Extension         = .ttf,
-            BoldFont          = OpenSans-Semibold,
-            ItalicFont        = OpenSans-Italic,
-            BoldItalicFont    = OpenSans-SemiboldItalic,
+            Extension         = .otf,
+            BoldFont          = SourceSansPro-Semibold,
+            ItalicFont        = SourceSansPro-Italic,
+            BoldItalicFont    = SourceSansPro-SemiboldItalic,
             SmallCapsFeatures = {Letters = SmallCaps},
             Numbers           = OldStyle,
-            Ligatures=TeX]{OpenSans-Regular}
+            Ligatures=TeX]{SourceSansPro-Regular}
 \newfontfamily\sourcecodefont[
             Path              = src/fonts/,
             Extension         = .otf,
@@ -61,7 +61,7 @@ parskip=half,
             SmallCapsFeatures = {Letters = SmallCaps},
             Numbers           = OldStyle,
             Ligatures=TeX]{SourceCodePro-Regular}
-\usepackage[ngerman, german]{babel}
+\usepackage[english, ngerman, german]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage{graphicx}
 \usepackage{color}
@@ -77,6 +77,7 @@ parskip=half,
 \usepackage{caption}
 \usepackage{colortbl}
 \usepackage{amssymb}
+\usepackage{todonotes}
 \usepackage{url}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% DOCUMENT DEFINITIONS
@@ -137,7 +138,7 @@ parskip=half,
 %% DOKUMENT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-	\selectlanguage{ngerman}
+	\selectlanguage{english}
 
 	%%% PATHES FOR GRAPHIC-FILES
 	\graphicspath{{./}{img/}}
@@ -145,9 +146,9 @@ parskip=half,
 	%%% PDF-DOCUMENT-INFO
 	\hypersetup{%
 		pdftitle	= {\docTitle},
-		pdfsubject	= {Master's Thesis},
+		pdfsubject	= {Bachelor's Thesis},
 		pdfauthor	= {\docAuthor},
-		pdfcreator	= {PDFLaTeX},
+		pdfcreator	= {XeLaTeX},
 		pdfproducer	= {LaTeX with hyperref and thumbpdf}		
 	}
 	
@@ -167,7 +168,7 @@ parskip=half,
 	%% TABLE OF CONTENT
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\clearpage
-	\pdfbookmark[0]{Inhaltsverzeichnis}{toc}	
+	\pdfbookmark[0]{Contents}{toc}	
 	\tableofcontents
  	
  	\clearpage
@@ -188,20 +189,13 @@ parskip=half,
     \input{src/Evaluation-Implementation}
     
     \input{src/Conclusion}
-	
-	%\include{src/Grundlagen}
-	
-	%\include{src/Hauptteil}
-	
-	%\include{src/Evaluierung}
-	
-	%\include{src/Schluss}
+
   
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%% END CONTENT
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%% BIBLIOGRAPHY
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\clearpage
@@ -221,8 +215,8 @@ parskip=half,
 		\small
     \renewcommand{\thepage}{\thechapter-\arabic{page}}
     %\include{src/Anhang}
-    \include{src/Anhang/App}
-    \include{src/Anhang/Eval}
+    %\include{src/Anhang/App}
+    %\include{src/Anhang/Eval}
 	\end{appendix}
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
