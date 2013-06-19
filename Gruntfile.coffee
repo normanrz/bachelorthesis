@@ -10,7 +10,7 @@ module.exports = (grunt) ->
           interrupt: true
       bibtex:
         files: "**/*.bib"
-        tasks: ["exec:bibtex"]
+        tasks: ["exec:bibtex", "exec:latex"]
         options:
           interrupt: true
 
