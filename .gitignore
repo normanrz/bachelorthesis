@@ -7,3 +7,4 @@ node_modules
 *.bbl
 *.toc
 *.blg
+*.lof

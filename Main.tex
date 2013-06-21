@@ -54,7 +54,7 @@ parskip=half,
             SmallCapsFeatures = {Letters = SmallCaps},
             Numbers           = OldStyle,
             Ligatures=TeX]{SourceSansPro-Regular}
-\newfontfamily\sourcecodefont[
+\setmonofont[
             Path              = src/fonts/,
             Extension         = .otf,
             BoldFont          = SourceCodePro-Semibold,
@@ -86,10 +86,10 @@ parskip=half,
 \newcommand{\docAuthorMail}{norman.rzepka@student.hpi.uni-potsdam.de}
 \newcommand{\docTitle}{The design of an web-based event-driven client application architecture for Project Zoom}
 \newcommand{\docTitleDE}{Entwicklung einer web-basierten ereignis-gesteuerten Clientantwendungs-Architektur für Project Zoom}
-\newcommand{\docSupervisited}{Prof. Dr. Holger Giese, Gregor Berg M.Sc. und Thomas Behyl, M.Sc.}
+\newcommand{\docSupervisited}{Prof. Dr. Holger Giese, Gregor Berg M.Sc. and Thomas Behyl, M.Sc.}
 \newcommand{\docCity}{Potsdam}
 \newcommand{\docDate}{\today}
-\newcommand{\docChair}{System Analysis and Modeling Group}
+\newcommand{\docChair}{Research Group System Analysis and Modeling Group}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% END OF DOKUMENT DEFINITIONS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -102,12 +102,6 @@ parskip=half,
 \addtokomafont{subject}{\opensansfont}
 \addtokomafont{chapterentry}{\opensansfont}
 \addtokomafont{paragraph}{\opensansfont}
-
-\makeatletter
-\def\url@leostyle{%
-  \def\UrlFont{\sourcecodefont}}
-\makeatother
-\urlstyle{leo}
 
 \captionsetup{format=plain,labelfont=bf,labelsep=endash,justification=RaggedRight}%,indention=1cm}
 \input{util/commands}
@@ -170,7 +164,7 @@ parskip=half,
 	%% TABLE OF CONTENT
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\clearpage
-	\pdfbookmark[0]{Contents}{toc}	
+	\pdfbookmark[0]{Contents}{toc}
 	\tableofcontents
  	
  	\clearpage
@@ -196,7 +190,14 @@ parskip=half,
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%% END CONTENT
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  
+    
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%% LIST OF FIGURES
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\clearpage
+	\listoffigures
+	\addcontentsline{toc}{chapter}{\listfigurename}
+
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%% BIBLIOGRAPHY
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
