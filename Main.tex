@@ -36,31 +36,6 @@ parskip=half,
 %% INCLUDE PACKAGES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{fontspec}
-\setmainfont[
-            Path              = src/fonts/,
-            Extension         = .otf,
-            BoldFont          = SourceSansPro-Semibold,
-            ItalicFont        = SourceSansPro-Italic,
-            BoldItalicFont    = SourceSansPro-SemiboldItalic,
-            SmallCapsFeatures = {Letters = SmallCaps},
-            Numbers           = OldStyle,
-            Ligatures=TeX]{SourceSansPro-Regular}
-\newfontfamily\opensansfont[
-            Path              = src/fonts/,
-            Extension         = .otf,
-            BoldFont          = SourceSansPro-Semibold,
-            ItalicFont        = SourceSansPro-Italic,
-            BoldItalicFont    = SourceSansPro-SemiboldItalic,
-            SmallCapsFeatures = {Letters = SmallCaps},
-            Numbers           = OldStyle,
-            Ligatures=TeX]{SourceSansPro-Regular}
-\setmonofont[
-            Path              = src/fonts/,
-            Extension         = .otf,
-            BoldFont          = SourceCodePro-Semibold,
-            SmallCapsFeatures = {Letters = SmallCaps},
-            Numbers           = OldStyle,
-            Ligatures=TeX]{SourceCodePro-Regular}
 \usepackage[english, ngerman, german]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage{graphicx}
@@ -97,6 +72,31 @@ parskip=half,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% FONT
+\setmainfont[
+            Path              = src/fonts/,
+            Extension         = .otf,
+            BoldFont          = SourceSansPro-Semibold,
+            ItalicFont        = SourceSansPro-Italic,
+            BoldItalicFont    = SourceSansPro-SemiboldItalic,
+            SmallCapsFeatures = {Letters = SmallCaps},
+            Numbers           = OldStyle,
+            Ligatures=TeX]{SourceSansPro-Regular}
+\newfontfamily\opensansfont[
+            Path              = src/fonts/,
+            Extension         = .otf,
+            BoldFont          = SourceSansPro-Semibold,
+            ItalicFont        = SourceSansPro-Italic,
+            BoldItalicFont    = SourceSansPro-SemiboldItalic,
+            SmallCapsFeatures = {Letters = SmallCaps},
+            Numbers           = OldStyle,
+            Ligatures=TeX]{SourceSansPro-Regular}
+\setmonofont[
+            Path              = src/fonts/,
+            Extension         = .otf,
+            BoldFont          = SourceCodePro-Semibold,
+            SmallCapsFeatures = {Letters = SmallCaps},
+            Numbers           = OldStyle,
+            Ligatures=TeX]{SourceCodePro-Regular}
 \addtokomafont{chapter}{\opensansfont}
 \addtokomafont{section}{\opensansfont}
 \addtokomafont{subsection}{\opensansfont}
@@ -104,6 +104,7 @@ parskip=half,
 \addtokomafont{subject}{\opensansfont}
 \addtokomafont{chapterentry}{\opensansfont}
 \addtokomafont{paragraph}{\opensansfont}
+\setstretch{1.2}
 
 \captionsetup{format=plain,labelfont=bf,labelsep=endash,justification=RaggedRight}%,indention=1cm}
 \input{util/commands}
@@ -126,7 +127,6 @@ parskip=half,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% colored head- and footlines
 \setheadsepline{1.0pt}[\color{hpired}] \setfootsepline{1.0pt}[\color{hpired}]
-\setstretch{1.3}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Glossary
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -166,7 +166,8 @@ parskip=half,
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%% TABLE OF CONTENT
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\clearpage
+	\cleardoublepage
+	\phantomsection
 	\pdfbookmark[0]{Contents}{toc}
 	\tableofcontents
  	

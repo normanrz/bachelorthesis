@@ -1,4 +1,19 @@
 \appendixChapter{REST interface}
 \label{appendix:REST}
 
- \todo{include REST spec}
+\todo{include REST spec}
+
+\begin{lstlisting}[language=restinterface]
+GET /resources
+# returns the 50 first resources
+
+GET /resources?limit=100
+# returns the 100 first resources
+
+GET /resources?offset=30&limit=10
+# returns 10 resources from the 30th
+
+GET /resources/:id
+# returns all details of a specific resource
+
+\end{lstlisting}
