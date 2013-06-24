@@ -1,0 +1,32 @@
+\appendixChapter{JSON Patch example}
+\label{appendix:JSONpatch}
+
+\begin{figure}[h]
+\begin{lstlisting}[language=json,caption=Initial JSON document]
+{ "foo": "bar" }
+\end{lstlisting}
+
+\begin{lstlisting}[language=json,caption=JSON patch]
+[
+  { 
+    "op": "replace", "path": "foo",
+    "value": {
+      "baz": "bar"
+    }
+  },
+  { "op": "add", "path": "foo/qux", "value": 123 }
+]
+\end{lstlisting}
+
+\begin{lstlisting}[language=json,caption=Resulting JSON document]
+{
+  "foo": {
+    "baz": "bar",
+    "qux": 123
+  }
+}
+\end{lstlisting}
+
+\caption{An example JSON patch application}
+\label{fig:jsonpatch}
+\end{figure}

@@ -55,6 +55,7 @@ parskip=half,
 \usepackage{todonotes}
 \usepackage{setspace}
 \usepackage{url}
+% \usepackage[bottom]{footmisc}
 \include{util/json-listings}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% DOCUMENT DEFINITIONS
@@ -217,11 +218,12 @@ parskip=half,
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%% APPENDIX
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \begin{appendix} 
+  	\begin{appendix} 
 		\clearpage
 		\small
     \renewcommand{\thepage}{\thechapter-\arabic{page}}
     \include{src/Appendix/Rest-Interface}
+    \include{src/Appendix/Json-patch}
     %\include{src/Anhang/App}
     %\include{src/Anhang/Eval}
 	\end{appendix}
