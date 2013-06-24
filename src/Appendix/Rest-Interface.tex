@@ -3,6 +3,22 @@
 
 \todo{include REST spec}
 
+\section{Datatypes}
+\begin{tabular}{ l | l }
+\hline
+identifier & example \\ \hline
+int & 3 \\
+double & 3.5 \\
+bool & true \\
+"string" & "test" \\
+"object\_id" & "512d2218c2c1804377000005" (\href{http://docs.mongodb.org/manual/reference/object-id/}{Mongo ObjectId}) \\
+"date" & "2013-02-26T02:00:00Z" (\href{http://en.wikipedia.org/wiki/ISO_8601}{ISO 8601}) \\
+\{object\} & \verb+{"test": 123 }+ \\ \hline
+\end{tabular}
+
+
+\section{General}
+
 \begin{lstlisting}[language=restinterface]
 GET /resources
 # returns the 50 first resources
@@ -16,4 +32,259 @@ GET /resources?offset=30&limit=10
 GET /resources/:id
 # returns all details of a specific resource
 
+
+PUT /resources/:id
+# replaces this item 
+=> 200 OK
+or
+=> 400 Bad Request
+   {
+     errors: []
+   }
+
+
+PATCH /resources/:id
+# incrementally updates this item
+=> 200 OK
+or
+=> 400 Bad Request
+   {
+     errors: []
+   } 
+
+
+POST /resources
+# creates a new item
+=> 200 OK
+or
+=> 400 Bad Request
+   {
+     errors: []
+   }
+
+
+DELETE /resources/:id
+# deletes this item
+=> 200 OK
+or
+=> 400 Bad Request
+   {
+     errors: []
+   }
+
+\end{lstlisting}
+
+
+\section{projects}
+\begin{lstlisting}[language=restinterface]
+GET /projects
+{
+  "limit": int,
+  "offset": int,
+  "content": [
+    {
+      "id": "object_id",
+      "name": "string",
+      "length": "string",
+      "season": "string",
+      "year": "string",
+      "_graphs": ["object_id", …],
+      "_tags": ["object_id", …]
+    }, …
+  ]
+}
+
+GET /projects/:id
+{
+  "id": "object_id",
+  "name": "string",
+  "length": "string",
+  "season": "string",
+  "year": "string",
+  "_graphs": ["object_id", …],
+  "_tags": ["object_id", …]
+}
+
+GET /projects/:id/artifacts
+{
+  "limit": int,
+  "offset": int,
+  "content": [
+    {
+      "id": "object_id",
+      "name": "string",
+      "path": "string",
+      "projectName": "string",
+      "resources": [
+        {
+          "hash": "string",
+          "name": "string",
+          "typ": "string"
+        }, …
+      ],
+      "createdAt": int,
+      "isDeleted": bool,
+      metadata: {object}
+    }, …
+  ]
+}
+
+
+POST /projects/:id/graphs
+=> 303 See other
+Location: /graphs/:graph_group
+
+\end{lstlisting}
+
+
+\section{artifacts}
+\begin{lstlisting}[language=restinterface]
+GET /artifacts/:id
+{
+  "id": "object_id",
+  "name": "string",
+  "path": "string",
+  "projectName": "string",
+  "resources": [
+    {
+      "hash": "string",
+      "name": "string",
+      "typ": "string"
+    }, …
+  ],
+  "createdAt": int,
+  "isDeleted": bool,
+  metadata: {object}
+}
+
+GET /artifacts/:id/:typ/:name 
+=> 200 OK
+Content-Type: application/octet-stream
+\end{lstlisting}
+
+
+\section{tags}
+\begin{lstlisting}[language=restinterface]
+GET /tags
+{
+  "limit": int,
+  "offset": int,
+  "content": [
+    {
+      "color": {"r": int, "g": int, "b": int},
+      "id": "object_id",
+      "name": "string"
+    }, …
+  ]
+}
+
+GET /tags/:name
+{
+  "color": {"r": int, "g": int, "b": int},
+  "id": "object_id",
+  "name": "string"
+}
+\end{lstlisting}
+
+
+\section{users}
+\begin{lstlisting}[language=restinterface]
+GET /users
+{
+  "limit": int,
+  "offset": int,
+  "content": [
+    {
+      "id": "object_id",
+      "email": "string"
+      "firstName": "string",
+      "lastName": "string"
+    }, …
+  ]
+}
+
+GET /users/:email
+{
+  "id": "object_id",
+  "email": "string"
+  "firstName": "string",
+  "lastName": "string"
+}
+\end{lstlisting}
+
+
+\section{graphs}
+\begin{lstlisting}[language=restinterface]
+GET /graphs
+{
+  "limit": int,
+  "offset": int,
+  "content": [
+    {
+      "_project": "object_id",
+      "id": "object_id",
+      "clusters": [
+        {
+          "comment": "string",
+          "content": [int, int, …],
+          "id": int,
+          "phase": "string",
+          "waypoints": [{ "x": int, "y": int }, …]
+        }, …
+      ],
+      "edges": [
+        {
+          "from": int,
+          "to": int
+        }, …
+      ],
+      "group": "string",
+      "nodes": [
+        {
+          "id": int,
+          "typ": "string",
+          "position": { "x": int, "y": int },
+          "payload": {object}
+        }, …
+      ],
+      "version": int,
+    }, …
+  ]
+}
+
+GET /graphs/:graph_group
+{
+  "_project": "object_id",
+  "id": "object_id",
+  "clusters": [
+    {
+      "comment": "string",
+      "content": [int, int, …],
+      "id": int,
+      "phase": "string",
+      "waypoints": [{ "x": int, "y": int }, …]
+    }, …
+  ],
+  "edges": [
+    {
+      "from": int,
+      "to": int
+    }, …
+  ],
+  "group": "string",
+  "nodes": [
+    {
+      "id": int,
+      "typ": "string",
+      "position": { "x": int, "y": int },
+      "payload": {object}
+    }, …
+  ],
+  "version": int,
+}
+
+PATCH  /graphs/:groupId/:version
+{
+  "version": int
+}
 \end{lstlisting}
