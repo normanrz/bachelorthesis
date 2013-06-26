@@ -3,7 +3,6 @@ Output
 node_modules
 *.aux
 *.log
-*.pdf
 *.bbl
 *.toc
 *.blg
