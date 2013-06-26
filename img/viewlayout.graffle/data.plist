@@ -44,7 +44,7 @@
 	<key>Creator</key>
 	<string>Norman Rzepka</string>
 	<key>DisplayScale</key>
-	<string>1 0/72 in = 1 0/72 in</string>
+	<string>1 0/72 in = 1.0000 in</string>
 	<key>GraphDocumentVersion</key>
 	<integer>8</integer>
 	<key>GraphicsList</key>
@@ -71,12 +71,31 @@
 				<dict>
 					<key>Color</key>
 					<dict>
+						<key>archive</key>
+						<data>
+						YnBsaXN0MDDUAQIDBAUIISJUJHRv
+						cFgkb2JqZWN0c1gkdmVyc2lvblkk
+						YXJjaGl2ZXLRBgdUcm9vdIABpQkK
+						ExceVSRudWxs1AsMDQ4PEBESV05T
+						V2hpdGVWJGNsYXNzXE5TQ29sb3JT
+						cGFjZV8QEk5TQ3VzdG9tQ29sb3JT
+						cGFjZUIwAIAEEASAAtIUDBUWVE5T
+						SUQQBYAD0hgZGh1YJGNsYXNzZXNa
+						JGNsYXNzbmFtZaIbHFxOU0NvbG9y
+						U3BhY2VYTlNPYmplY3RcTlNDb2xv
+						clNwYWNl0hgZHyCiIBxXTlNDb2xv
+						chIAAYagXxAPTlNLZXllZEFyY2hp
+						dmVyCBEWHygyNTo8QkhRWWBtgoWH
+						iYuQlZeZnqeytcLL2N3g6O0AAAAA
+						AAABAQAAAAAAAAAjAAAAAAAAAAAA
+						AAAAAAAA/w==
+						</data>
 						<key>b</key>
-						<string>0.226835</string>
+						<string>0</string>
 						<key>g</key>
-						<string>0.226831</string>
+						<string>0</string>
 						<key>r</key>
-						<string>0.226838</string>
+						<string>0</string>
 					</dict>
 					<key>HeadArrow</key>
 					<string>0</string>
@@ -112,11 +131,11 @@
 					<key>Color</key>
 					<dict>
 						<key>b</key>
-						<string>0.220129</string>
+						<string>0</string>
 						<key>g</key>
-						<string>0.220125</string>
+						<string>0</string>
 						<key>r</key>
-						<string>0.220132</string>
+						<string>0</string>
 					</dict>
 					<key>HeadArrow</key>
 					<string>0</string>
@@ -372,11 +391,11 @@
 					<key>Color</key>
 					<dict>
 						<key>b</key>
-						<string>0.226835</string>
+						<string>0</string>
 						<key>g</key>
-						<string>0.226831</string>
+						<string>0</string>
 						<key>r</key>
-						<string>0.226838</string>
+						<string>0</string>
 					</dict>
 					<key>HeadArrow</key>
 					<string>0</string>
@@ -409,15 +428,6 @@
 			<dict>
 				<key>stroke</key>
 				<dict>
-					<key>Color</key>
-					<dict>
-						<key>b</key>
-						<string>0.220129</string>
-						<key>g</key>
-						<string>0.220125</string>
-						<key>r</key>
-						<string>0.220132</string>
-					</dict>
 					<key>HeadArrow</key>
 					<string>0</string>
 					<key>Join</key>
@@ -671,7 +681,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2013-06-25 19:31:05 +0000</string>
+	<string>2013-06-26 17:37:37 +0000</string>
 	<key>Modifier</key>
 	<string>Norman Rzepka</string>
 	<key>NotesVisible</key>
@@ -747,7 +757,7 @@
 		<key>ExpandedCanvases</key>
 		<array/>
 		<key>Frame</key>
-		<string>{{112, 67}, {1207, 938}}</string>
+		<string>{{93, -19}, {1207, 938}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -761,7 +771,7 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{-37.000004, -43.000011}, {1191.1111, 869.99994}}</string>
+		<string>{{-37.000004, -43.000015}, {1191.1111, 870}}</string>
 		<key>Zoom</key>
 		<real>0.89999997615814209</real>
 		<key>ZoomValues</key>

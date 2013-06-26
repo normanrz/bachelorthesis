@@ -4,7 +4,7 @@ module.exports = (grunt) ->
   grunt.initConfig(
     watch: 
       latex:
-        files: "**/*.tex"
+        files: ["**/*.tex", "img/**/*.pdf", "img/**/*.png", "img/**/*.jpg"]
         tasks: ["exec:latex"]
         options:
           interrupt: true
