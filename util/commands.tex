@@ -27,12 +27,25 @@
   \end{minipage}}
   \end{quote}}
 
+\makeatletter 
+\let\orglabelinglabel\labelinglabel 
+\renewcommand*{\labelinglabel}[1]{%   
+  \let\orglabel\label   
+  \let\label\@gobble   
+  \phantomsection   
+  \edef\@currentlabel{#1}%   
+  %\edef\@currentlabelname{#1}%   
+  \let\label\orglabel   
+  \orglabelinglabel{\textbf{#1:}}% 
+} 
+\makeatother
+
 \definecolor{lightblue}{rgb}{0.9,0.9,0.9}
 \definecolor{darkred}{rgb}{0.5,0,0}
 \definecolor{darkgreen}{rgb}{0,0.5,0}
 \definecolor{darkgrey}{rgb}{0.8,0.8,0.8}
 
-\renewcommand*\lstlistingname{Quelltext}
+%\renewcommand*\lstlistingname{Quelltext}
 %\JavaStyleBegin{title}{caption}{label}
 \newcommand{\JavaStyleBegin}[3]{
   \begin{lstlisting}[language = Java,
