@@ -7,10 +7,10 @@ First, the use cases and requirements, which were a result of the design process
 
 Then, the components of the client application have been introduced. The Model is the component that is responsible for connecting to the server's REST interface. It stores the data in a hierarchical structure and keeps track of any changes. It also listens to changes sent from the server and assembles patches for change propagation to the server. The View is responsible for rendering the data from the Model to the user interface. It is built with a set of hierarchical components that bind to the data. The Controller handles user interactions and manipulates both the data in the Model as well as the View. There is a main Controller for handling the zoom-based actions and several Behavior Controllers that encapsulate behavior for a particular View. 
 
-After outlining the architecture concepts, some implementation considerations have been discussed. Finally, the architecture has been evaluated based on the previously established use cases and requirements.
+After outlining the architecture concepts, some implementation considerations have been dis\-cuss\-ed. Finally, the architecture has been evaluated based on the previously established use cases and requirements.
 
 \section{Future Work}
-Project Zoom supports real-time collaboration by implementing the Operational Transformation concept.  However, due to the lack of proper conflict resolution, only concurrent read access is encouraged. Developing a solution for handling conflicts could enable the full potential of a real-time collaborative application.
+Project Zoom supports real-time collaboration by implementing the Operational Transformation concept. However, due to the lack of proper conflict resolution, only concurrent read access is encouraged. Developing a solution for handling conflicts could enable the full potential of a real-time collaborative application.
 
 The current implementation of Project Zoom has support for mobile tablet devices in a way that all main tasks can be completed. However, improving performance and taking advantage of the devices' multi-touch gestures could enhance the user experience greatly.
 

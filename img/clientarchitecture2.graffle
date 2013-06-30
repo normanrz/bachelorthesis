@@ -1492,7 +1492,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{449.71545, 76.559326}, {88, 28}}</string>
+			<string>{{401.10422, 76.559326}, {88, 28}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -1632,7 +1632,7 @@
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{739.35614, 89.748566}, {8.0865917, 4.2515774}}</string>
+					<string>{{790.73499, 89.748566}, {8.0865917, 4.2515774}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
@@ -1650,7 +1650,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{739.35614, 80.890961}, {8.0865917, 4.2515774}}</string>
+					<string>{{790.73499, 80.890961}, {8.0865917, 4.2515774}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
@@ -1668,7 +1668,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{743.40424, 76.559326}, {21.248291, 22}}</string>
+					<string>{{794.78308, 76.559326}, {21.248291, 22}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
@@ -2512,7 +2512,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2013-06-30 21:47:48 +0000</string>
+	<string>2013-06-30 22:31:54 +0000</string>
 	<key>Modifier</key>
 	<string>Norman Rzepka</string>
 	<key>NotesVisible</key>
