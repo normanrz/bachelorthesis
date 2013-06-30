@@ -87,6 +87,37 @@
 	<key>GraphicsList</key>
 	<array>
 		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>649</integer>
+			</dict>
+			<key>ID</key>
+			<integer>699</integer>
+			<key>Points</key>
+			<array>
+				<string>{573.52631, 247.00845}</string>
+				<string>{611.16052, 247.00845}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>0</string>
+					<key>TailArrow</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>674</integer>
+			</dict>
+		</dict>
+		<dict>
 			<key>Bounds</key>
 			<string>{{469.16666, 212.85866}, {82, 14}}</string>
 			<key>Class</key>
@@ -133,49 +164,6 @@
 			</dict>
 			<key>Wrap</key>
 			<string>NO</string>
-		</dict>
-		<dict>
-			<key>Bounds</key>
-			<string>{{459.00012, 130.66664}, {545, 386.66672}}</string>
-			<key>Class</key>
-			<string>ShapedGraphic</string>
-			<key>ID</key>
-			<integer>697</integer>
-			<key>Shape</key>
-			<string>Rectangle</string>
-			<key>Style</key>
-			<dict>
-				<key>fill</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-				<key>stroke</key>
-				<dict>
-					<key>Cap</key>
-					<integer>2</integer>
-					<key>Color</key>
-					<dict>
-						<key>b</key>
-						<string>0</string>
-						<key>g</key>
-						<string>0.498802</string>
-						<key>r</key>
-						<string>0</string>
-					</dict>
-					<key>Join</key>
-					<integer>0</integer>
-					<key>Pattern</key>
-					<integer>1</integer>
-					<key>Width</key>
-					<real>4</real>
-				</dict>
-			</dict>
 		</dict>
 		<dict>
 			<key>AllowConnections</key>
@@ -330,64 +318,6 @@
 			<dict>
 				<key>ID</key>
 				<integer>673</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>AllowConnections</key>
-			<string>NO</string>
-			<key>AllowLabelDrop</key>
-			<false/>
-			<key>AllowToConnect</key>
-			<false/>
-			<key>Class</key>
-			<string>LineGraphic</string>
-			<key>ID</key>
-			<integer>689</integer>
-			<key>Points</key>
-			<array>
-				<string>{573.02625, 246.53014}</string>
-				<string>{591.44781, 246.53014}</string>
-			</array>
-			<key>Style</key>
-			<dict>
-				<key>stroke</key>
-				<dict>
-					<key>HeadArrow</key>
-					<string>EmptyCenterBall</string>
-					<key>HeadScale</key>
-					<real>3</real>
-					<key>TailArrow</key>
-					<string>0</string>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>AllowConnections</key>
-			<string>NO</string>
-			<key>AllowLabelDrop</key>
-			<false/>
-			<key>AllowToConnect</key>
-			<false/>
-			<key>Class</key>
-			<string>LineGraphic</string>
-			<key>ID</key>
-			<integer>688</integer>
-			<key>Points</key>
-			<array>
-				<string>{611.66052, 246.53012}</string>
-				<string>{591.44781, 246.53012}</string>
-			</array>
-			<key>Style</key>
-			<dict>
-				<key>stroke</key>
-				<dict>
-					<key>HeadArrow</key>
-					<string>EmptyCenterBall</string>
-					<key>HeadScale</key>
-					<real>3</real>
-					<key>TailArrow</key>
-					<string>0</string>
-				</dict>
 			</dict>
 		</dict>
 		<dict>
@@ -1597,6 +1527,49 @@
 			<key>ID</key>
 			<integer>631</integer>
 		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{459.00012, 130.66664}, {545, 386.66672}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>697</integer>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Cap</key>
+					<integer>2</integer>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0</string>
+						<key>g</key>
+						<string>0.498802</string>
+						<key>r</key>
+						<string>0</string>
+					</dict>
+					<key>Join</key>
+					<integer>0</integer>
+					<key>Pattern</key>
+					<integer>1</integer>
+					<key>Width</key>
+					<real>4</real>
+				</dict>
+			</dict>
+		</dict>
 	</array>
 	<key>GridInfo</key>
 	<dict/>
@@ -1645,7 +1618,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2013-06-28 15:24:22 +0000</string>
+	<string>2013-06-30 14:22:00 +0000</string>
 	<key>Modifier</key>
 	<string>Norman Rzepka</string>
 	<key>NotesVisible</key>
@@ -1731,7 +1704,7 @@
 		<key>ExpandedCanvases</key>
 		<array/>
 		<key>Frame</key>
-		<string>{{80, 75}, {1063, 938}}</string>
+		<string>{{-120, 90}, {1063, 938}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -1745,7 +1718,7 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{333.33334, 67.5}, {654.16663, 652.5}}</string>
+		<string>{{406.66669, 64.166664}, {654.16669, 652.49994}}</string>
 		<key>Zoom</key>
 		<real>1.2000000476837158</real>
 		<key>ZoomValues</key>

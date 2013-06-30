@@ -44,7 +44,7 @@
 	<key>Creator</key>
 	<string>Norman Rzepka</string>
 	<key>DisplayScale</key>
-	<string>1 0/72 in = 1 0/72 in</string>
+	<string>1 0/72 in = 1.0000 in</string>
 	<key>GraphDocumentVersion</key>
 	<integer>8</integer>
 	<key>GraphicsList</key>
@@ -73,11 +73,6 @@
 			</array>
 			<key>Style</key>
 			<dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>YES</string>
-				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
@@ -111,11 +106,6 @@
 			</array>
 			<key>Style</key>
 			<dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>YES</string>
-				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
@@ -155,6 +145,11 @@
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
 						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
 					</dict>
 					<key>Text</key>
 					<dict>
@@ -190,6 +185,11 @@
 						<dict>
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
 						</dict>
 					</dict>
 					<key>Text</key>
@@ -236,11 +236,6 @@
 			</array>
 			<key>Style</key>
 			<dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>YES</string>
-				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
@@ -278,11 +273,6 @@
 			</array>
 			<key>Style</key>
 			<dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>YES</string>
-				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
@@ -322,11 +312,6 @@
 			</array>
 			<key>Style</key>
 			<dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>YES</string>
-				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
@@ -360,11 +345,6 @@
 			</array>
 			<key>Style</key>
 			<dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>YES</string>
-				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
@@ -404,6 +384,11 @@
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
 						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
 					</dict>
 					<key>Text</key>
 					<dict>
@@ -439,6 +424,11 @@
 						<dict>
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
 						</dict>
 					</dict>
 					<key>Text</key>
@@ -493,6 +483,11 @@
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
 						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
 					</dict>
 					<key>Text</key>
 					<dict>
@@ -528,6 +523,11 @@
 						<dict>
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
 						</dict>
 					</dict>
 					<key>Text</key>
@@ -582,6 +582,11 @@
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
 						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
 					</dict>
 					<key>Text</key>
 					<dict>
@@ -617,6 +622,11 @@
 						<dict>
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
 						</dict>
 					</dict>
 					<key>Text</key>
@@ -671,6 +681,11 @@
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
 						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
 					</dict>
 					<key>Text</key>
 					<dict>
@@ -706,6 +721,11 @@
 						<dict>
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
 						</dict>
 					</dict>
 					<key>Text</key>
@@ -758,11 +778,6 @@
 			</array>
 			<key>Style</key>
 			<dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>YES</string>
-				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
@@ -802,11 +817,6 @@
 			</array>
 			<key>Style</key>
 			<dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>YES</string>
-				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
@@ -846,11 +856,6 @@
 			</array>
 			<key>Style</key>
 			<dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>YES</string>
-				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
@@ -890,11 +895,6 @@
 			</array>
 			<key>Style</key>
 			<dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>YES</string>
-				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
@@ -934,11 +934,6 @@
 			</array>
 			<key>Style</key>
 			<dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>YES</string>
-				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
@@ -978,11 +973,6 @@
 			</array>
 			<key>Style</key>
 			<dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>YES</string>
-				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
@@ -1017,16 +1007,11 @@
 			<real>72.58489990234375</real>
 			<key>Points</key>
 			<array>
-				<string>{442.82269, 199.34399}</string>
-				<string>{328.99536, 296.80734}</string>
+				<string>{442.82114, 199.34396}</string>
+				<string>{328.97305, 296.80682}</string>
 			</array>
 			<key>Style</key>
 			<dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>YES</string>
-				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
@@ -1061,17 +1046,12 @@
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{462.66174, 325.4028}</string>
-				<string>{484.90567, 339.73572}</string>
-				<string>{550.4162, 311.3309}</string>
+				<string>{465.42053, 325.36084}</string>
+				<string>{483.96228, 334.90567}</string>
+				<string>{547.65759, 311.30569}</string>
 			</array>
 			<key>Style</key>
 			<dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>YES</string>
-				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
@@ -1112,6 +1092,11 @@
 						<dict>
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
 						</dict>
 					</dict>
 					<key>Text</key>
@@ -1158,6 +1143,11 @@
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
 						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
 					</dict>
 					<key>Text</key>
 					<dict>
@@ -1193,6 +1183,11 @@
 						<dict>
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
 						</dict>
 					</dict>
 					<key>Text</key>
@@ -1247,6 +1242,11 @@
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
 						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
 					</dict>
 					<key>Text</key>
 					<dict>
@@ -1282,6 +1282,11 @@
 						<dict>
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
 						</dict>
 					</dict>
 					<key>Text</key>
@@ -1328,11 +1333,6 @@
 			</array>
 			<key>Style</key>
 			<dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>YES</string>
-				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
@@ -1364,11 +1364,6 @@
 			</array>
 			<key>Style</key>
 			<dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>YES</string>
-				</dict>
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
@@ -1408,6 +1403,11 @@
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
 						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
 					</dict>
 					<key>Text</key>
 					<dict>
@@ -1443,6 +1443,11 @@
 						<dict>
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
 						</dict>
 					</dict>
 					<key>Text</key>
@@ -1497,6 +1502,11 @@
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
 						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
 					</dict>
 					<key>Text</key>
 					<dict>
@@ -1532,6 +1542,11 @@
 						<dict>
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
 						</dict>
 					</dict>
 					<key>Text</key>
@@ -1586,6 +1601,11 @@
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
 						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
 					</dict>
 					<key>Text</key>
 					<dict>
@@ -1621,6 +1641,11 @@
 						<dict>
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
 						</dict>
 					</dict>
 					<key>Text</key>
@@ -1675,6 +1700,11 @@
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
 						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
 					</dict>
 					<key>Text</key>
 					<dict>
@@ -1710,6 +1740,11 @@
 						<dict>
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
 						</dict>
 					</dict>
 					<key>Text</key>
@@ -1764,6 +1799,11 @@
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
 						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
 					</dict>
 					<key>Text</key>
 					<dict>
@@ -1799,6 +1839,11 @@
 						<dict>
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
 						</dict>
 					</dict>
 					<key>Text</key>
@@ -1853,6 +1898,11 @@
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
 						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
 					</dict>
 					<key>Text</key>
 					<dict>
@@ -1888,6 +1938,11 @@
 						<dict>
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
 						</dict>
 					</dict>
 					<key>Text</key>
@@ -1942,6 +1997,11 @@
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
 						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
 					</dict>
 					<key>Text</key>
 					<dict>
@@ -1977,6 +2037,11 @@
 						<dict>
 							<key>GradientCenter</key>
 							<string>{-0.29411799, -0.26470599}</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
 						</dict>
 					</dict>
 					<key>Text</key>
@@ -2054,7 +2119,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2013-06-29 19:41:13 +0000</string>
+	<string>2013-06-30 14:32:05 +0000</string>
 	<key>Modifier</key>
 	<string>Norman Rzepka</string>
 	<key>NotesVisible</key>
@@ -2154,7 +2219,7 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{63.20755, 21.698114}, {1053.7737, 760.37738}}</string>
+		<string>{{0, 21.698114}, {1053.7736, 760.37738}}</string>
 		<key>Zoom</key>
 		<real>1.059999942779541</real>
 		<key>ZoomValues</key>
