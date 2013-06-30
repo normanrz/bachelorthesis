@@ -61,7 +61,7 @@ parskip=half,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\docAuthor}{Norman Rzepka}
 \newcommand{\docAuthorMail}{norman.rzepka@student.hpi.uni-potsdam.de}
-\newcommand{\docTitle}{The design of an web-based event-driven client application architecture for Project Zoom}
+\newcommand{\docTitle}{The design of a web-based event-driven client application architecture for Project Zoom}
 \newcommand{\docTitleDE}{Entwicklung einer web-basierten Ereignis-gesteuerten Clientanwendungs-Architektur für Project Zoom}
 \newcommand{\docSupervisited}{Prof. Dr. Holger Giese, Gregor Berg M.Sc. and Thomas Beyhl M.Sc.}
 \newcommand{\docCity}{Potsdam}
@@ -105,6 +105,7 @@ parskip=half,
 \addtokomafont{chapterentry}{\opensansfont}
 \addtokomafont{paragraph}{\opensansfont}
 \setstretch{1.2}
+\interfootnotelinepenalty=10000
 
 \captionsetup{format=plain,labelfont=bf,labelsep=endash,justification=RaggedRight}%,indention=1cm}
 \input{util/commands}
@@ -159,8 +160,8 @@ parskip=half,
 	\input{src/titlepage}
 	\thispagestyle{empty}
 	\cleardoublepage
-	\include{src/Acknowledgements}
 	\include{src/Zusammenfassung_d}
+	\cleardoublepage
 	\include{src/Zusammenfassung_e}
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -217,7 +218,8 @@ parskip=half,
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%% APPENDIX
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  	\begin{appendix} 
+  	\begin{appendix}
+  	\setstretch{1.1}
 		\clearpage
 		\small
     \renewcommand{\thepage}{\thechapter-\arabic{page}}
